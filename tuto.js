@@ -15,19 +15,26 @@ function CalcularPrecio() {
     const precioFinalSpanElement = document.getElementById('precioFinal');
     precioFinalSpanElement.innerText = `$${precioFinal}`;
 } */
-
 function showSection(id) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => section.classList.remove('active'));
+    // Ocultar todas las secciones
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
 
-    const selected = document.getElementById(id);
-    if (selected) selected.classList.add('active');
+    // Mostrar la sección seleccionada
+    const target = document.getElementById(id);
+    if (target) {
+        target.classList.add('active');
+    }
 
+    // Quitar clase 'active' de todos los enlaces
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
 
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => link.classList.remove('active'));
-
-
-    const currentLink = document.querySelector(`.nav-link[href="#${id}"]`);
-    if (currentLink) currentLink.classList.add('active');
+    const clickedLink = Array.from(document.querySelectorAll('.nav-link'))
+        .find(link => link.getAttribute('onclick')?.includes(id)); /*Aqui se busca el que tenga el id enviad*/
+    if (clickedLink) { /* si existe de se agrega a la lista de clase que esta activado*/
+        clickedLink.classList.add('active');
+    }
 }
