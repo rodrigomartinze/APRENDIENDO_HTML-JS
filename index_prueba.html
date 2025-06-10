@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodroad usa disfruta</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.6-dist/css/bootstrap.min.css" />
+    <script src="/tuto.js"></script>
+    <script src="/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            min-height: 50px;
+
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            object-fit: contain;
+            margin-top: -10px;
+
+        }
+
+        .navbar-brand span {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .navbar-nav .nav-link {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .navbar-nav .nav-item:first-child .nav-link {
+            margin-left: 270px;
+
+        }
+
+        @media (max-width: 1200px) {
+            .navbar-nav .nav-item:first-child .nav-link {
+                margin-left: 120px;
+                /* Margen menor */
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .navbar-nav .nav-item:first-child .nav-link {
+                margin-left: 20px;
+
+            }
+        }
+
+        @media (max-width: 800px) {
+            .navbar-nav .nav-item:first-child .nav-link {
+                margin-left: 0px;
+
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.png" alt="Logo RR" style="height: 80px;">
+                <span class="fs-2 fw-semibold" style="line-height: 1;">Rodroad</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Soporte técnico</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <form class="bg-white p-4 rounded shadow-sm">
+            <h2 class="text-center text-primary mb-4">Formulario de Precio</h2>
+
+            <div class="row mb-3 d-flex align-items-center">
+                <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12">
+                    <label class="form-label">Cantidad:</label>
+                </div>
+                <div class="col-xl-11 col-lg-11 col-md-10 col-sm-10 col-12">
+                    <input type="number" id="cantidad" name="cantidad" class="form-control" required min="1" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary" onclick="CalcularPrecio()">Calcular</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <label id="x1" class="form-label me-1 mb-0">Precio final:</label>
+                    <span id="precioFinal" class="fw-bold text-success"></span>
+                </div>
+            </div>
+        </form>
+
+        <div class="row mt-5">
+            <div class="col-2">
+                <div class="card">
+                    <img src="tenis-nuevo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">NUEVA EDICIÓN</h5>
+                        <p class="card-text">Corre más rápido que una pantera con nuestras nuevas zapatillas ¡</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito ¡</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log(document.getElementById("cantidad"));
+        console.log(document.getElementById("x1"));
+    </script>
+</body>
+
+</html>
