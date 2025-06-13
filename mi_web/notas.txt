@@ -1,0 +1,52 @@
+  
+  FORMULARIO Y TARGETA
+  
+  
+  
+    <div class="container mt-5">
+        <form class="bg-white p-4 rounded shadow-sm">
+            <h2 class="text-center text-primary mb-4">Formulario de Precio</h2>
+
+            <div class="row mb-3 d-flex align-items-center">
+                <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12">
+                    <label class="form-label">Cantidad:</label>
+                </div>
+                <div class="col-xl-11 col-lg-11 col-md-10 col-sm-10 col-12">
+                    <input type="number" id="cantidad" name="cantidad" class="form-control" required min="1" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary" onclick="CalcularPrecio()">Calcular</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <label id="x1" class="form-label me-1 mb-0">Precio final:</label>
+                    <span id="precioFinal" class="fw-bold text-success"></span>
+                </div>
+            </div>
+        </form>
+        <div class="row mt-5">
+            <div class="col-2">
+                <div class="card">
+                    <img src="tenis-nuevo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">NUEVA EDICION</h5>
+                        <p class="card-text">Corre más rápido que una pantera con nuestras nuevas zapatillas¡</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito¡</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        console.log(document.getElementById("cantidad"));
+        console.log(document.getElementById("x1"));
+    </script>
+
+    
